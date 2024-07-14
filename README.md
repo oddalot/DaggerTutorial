@@ -53,6 +53,8 @@ developer requests an object of a certain type through dagger, dagger will invok
 mapped to the type signature and the correct object will be returned. We will learn later how the
 developer lets dagger know how to create objects.
 
+<img src="https://github.com/user-attachments/assets/4fff3852-4fcd-419f-a842-f956544c4187" width="400">
+
 Now this seems all simple enough, but this is where things get complicated. When we said that
 invoking a class constructor is the way most objects get made, this left out one detail: the
 constructor itself may have arguments of its own that are required to be passed in when the
