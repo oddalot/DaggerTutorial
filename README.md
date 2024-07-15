@@ -43,8 +43,8 @@ eventually you will get to a point where somewhere a constructor is getting invo
 The important thing to realize, though, is that every object that is returned to us is of a certain
 type. Type theory is beyond the scope of this guide, but in Kotlin it's important to realize there
 can be a potentially infinite number of types that are possible from a given generic type definition
-. For instance `class List<T>` could produce Types of `List<Boolean>`, but also `List<List<Boolean>>
-` and so on. Each of these Types has a different signature, and therefore is a distinct entity as
+. For instance `class List<T>` could produce types of `List<Boolean>`, but also `List<List<Boolean>>
+` and so on. Each of these types has a different signature, and therefore is a distinct entity as
 far as dagger is concerned.
 
 With this knowledge of object creation and type signatures, we can now give a good definition of
