@@ -51,9 +51,9 @@ With this knowledge of object creation and type signatures, we can now give a go
 what dagger does under the hood. *Dagger maps class constructors to type signatures*, so if a
 developer requests an object of a certain type through dagger, dagger will invoke the constructor
 mapped to the type signature and the correct object will be returned. We will learn later how the
-developer lets dagger know how to create objects.
+developer lets dagger know how to create objects. The below diagram illustrates this relationship.
 
-<img src="https://github.com/user-attachments/assets/4fff3852-4fcd-419f-a842-f956544c4187" width="400">
+<img src="https://github.com/user-attachments/assets/22b372e7-8545-4861-a10c-1cffd8b969f5" width="400">
 
 Now this seems all simple enough, but this is where things get complicated. When we said that
 invoking a class constructor is the way most objects get made, this left out one detail: the
@@ -62,3 +62,5 @@ constructor is invoked. So we need to update our definition of what dagger does 
 maps class constructors to type signatures, and if the class constructor itself requires object
 parameters of certain types dagger will provide those objects as well - recursively, which will
 always end with a class constructor with no parameters.*
+
+
