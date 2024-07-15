@@ -67,7 +67,12 @@ calls. The below diagram illustrates this new relationship:
 
 <img src="https://github.com/user-attachments/assets/5a581aca-db66-4578-a9d0-28c9efe68960" width="450">
 
-
+Dagger now has all it needs to generate an object of any type. For example if an object of type
+`Animal` was now requested by the dagger user, dagger would have generated code similar to this:
+`Animal(plant: Plant(water: Water(), sun: Sun()))`. Of course the actual code dagger generates is
+much more complicated than this (for one thing dagger wraps all object creation in a `Provider`
+class), but for the sake of illustrative purposes this let's us understand what is happening by
+dagger internally.
 
 
 
