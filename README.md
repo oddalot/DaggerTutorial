@@ -61,6 +61,10 @@ constructor itself may have arguments of its own that are required to be passed 
 constructor is invoked. So we need to update our definition of what dagger does slightly. *Dagger
 maps class constructors to type signatures, and if the class constructor itself requires object
 parameters of certain types dagger will provide those objects as well - recursively, which will
-always end with a class constructor with no parameters.*
+always end with a class constructor with no parameters.* To do this dagger will keep a list of types
+for each class constructor so it can lookup the types needed all the way up the chain of constructor
+calls. The below diagram illustrates this new relationship:
+
+
 
 
