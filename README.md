@@ -65,6 +65,10 @@ always end with a class constructor with no parameters.* To do this dagger will 
 for each class constructor so it can lookup the types needed all the way up the chain of constructor
 calls. The below diagram illustrates this new relationship:
 
+<img src="https://github.com/user-attachments/assets/5a581aca-db66-4578-a9d0-28c9efe68960" width="450">
+
+
+
 
 
 
