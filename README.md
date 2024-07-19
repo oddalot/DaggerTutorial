@@ -28,8 +28,8 @@ When a developer writes an object oriented computer program that will execute co
 broad categories of actions that code can take:
 
 1. It can execute code that does some kind of logic or system calls - for instance it can add two
-numbers or it could request the current time from the system.
-2. It can create an object of some Type and store it in memory for later use.
+numbers or it can request the current time from the system.
+2. It can create an object of some type and store it in memory for later use.
 
 Dagger is concerned with the second action - it helps a developer keep track of creating objects
 and storing them for later.
@@ -43,8 +43,8 @@ eventually you will get to a point where somewhere a constructor is getting invo
 The important thing to realize, though, is that every object that is returned to us is of a certain
 type. Type theory is beyond the scope of this guide, but in Kotlin it's important to realize there
 can be a potentially infinite number of types that are possible from a given generic type definition
-. For instance `class List<T>` could produce Types of `List<Boolean>`, but also `List<List<Boolean>>
-` and so on. Each of these Types has a different signature, and therefore is a distinct entity as
+. For instance `class List<T>` could produce types of `List<Boolean>`, but also `List<List<Boolean>>
+` and so on. Each of these types has a different signature, and therefore is a distinct entity as
 far as dagger is concerned.
 
 With this knowledge of object creation and type signatures, we can now give a good definition of
@@ -65,14 +65,16 @@ always end with a class constructor with no parameters.* To do this dagger will 
 for each class constructor so it can lookup the types needed all the way up the chain of constructor
 calls. The below diagram illustrates this new relationship:
 
-<img src="https://github.com/user-attachments/assets/5a581aca-db66-4578-a9d0-28c9efe68960" width="450">
+<img src="https://github.com/user-attachments/assets/5a581aca-db66-4578-a9d0-28c9efe68960" width="400">
 
 Dagger now has all it needs to generate an object of any type. For example if an object of type
 `Animal` was now requested by the dagger user, dagger would have generated code similar to this:
 `Animal(plant: Plant(water: Water(), sun: Sun()))`. Of course the actual code dagger generates is
 much more complicated than this (for one thing dagger wraps all object creation in a `Provider`
-class), but for the sake of illustrative purposes this let's us understand what is happening by
-dagger internally.
+class), but for the sake of illustrative purposes this lets us understand what is happening by
+dagger internally. This generated code of nested class constructor calls is also the "graph" in the
+"directed acyclic graph" of which dagger is named. Again, this is a simplified example, but for
+all intensive purposes this is what dagger is doing for us under the hood.
 
 
 
