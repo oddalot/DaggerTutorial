@@ -75,3 +75,21 @@ class), but for the sake of illustrative purposes this lets us understand what i
 dagger internally. This generated code of nested class constructor calls is also the "graph" in the
 "directed acyclic graph" of which dagger is named. Again, this is a simplified example, but for
 all intensive purposes this is what dagger is doing for us under the hood.
+
+## Learn Dagger by Building a Dagger Clone with KSP
+
+To really learn the internals of dagger, let's build a dagger clone using KSP. KSP stands for Kotlin
+Symbol Processing, which is a library that sits in the complication process of Kotlin programs and
+generates new code while the code is being compiled by inspecting the source code and gleaming
+information from things like annotations and types to decide what to generate. The important things
+to realize is that KSP can not modify existing code, it can only generate new code.
+
+We'll call our dagger clone "Alien", which sounds cool and is fairly short. Please follow along
+as we build Alien together using KSP step by step. Each chapter will be a self contained Android
+project that can be built and installed on an Android device.
+
+### Table of Contents
+
+#### Chapter 1 - Setup
+
+
