@@ -75,7 +75,3 @@ class), but for the sake of illustrative purposes this lets us understand what i
 dagger internally. This generated code of nested class constructor calls is also the "graph" in the
 "directed acyclic graph" of which dagger is named. Again, this is a simplified example, but for
 all intensive purposes this is what dagger is doing for us under the hood.
-
-
-
-
