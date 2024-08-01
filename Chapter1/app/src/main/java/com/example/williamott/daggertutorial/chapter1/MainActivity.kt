@@ -11,9 +11,16 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.williamott.daggertutorial.alien.AlienInject
 import com.example.williamott.daggertutorial.chapter1.ui.theme.Chapter1Theme
 
 class MainActivity : ComponentActivity() {
+    @AlienInject
+    val what = "123"
+    
+    @AlienInject
+    val ok = 1
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

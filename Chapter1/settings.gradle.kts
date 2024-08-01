@@ -21,3 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Chapter 1"
 include(":app")
+include(":alien")
